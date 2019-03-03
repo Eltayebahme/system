@@ -2225,15 +2225,6 @@ member.guild.fetchInvites().then(guildInvites => {
       }
       });
 	   
-client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-    const ei = invites[member.guild.id];
-    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-    const inviter = client.users.get(invite.inviter.id);
-    const xkiller = member.guild.channels.find("name", "welcome");
-     xkiller.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
-  });
-});
    client.on('message',async message => {
   if(message.content.startsWith(prefix + "voiceonline")) {
   if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply(':x: **ليس لديك الصلاحيات الكافية**');
