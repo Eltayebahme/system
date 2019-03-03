@@ -27,7 +27,11 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
+<<<<<<< HEAD
 const prefix = 'a';
+=======
+const prefix = '-';
+>>>>>>> parent of e57bc62... Delete bot.js
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +39,11 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
+<<<<<<< HEAD
     var setGame = ['ahelp','Type ahelp'];
+=======
+    var setGame = ['-help','Type - help'];
+>>>>>>> parent of e57bc62... Delete bot.js
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -60,7 +68,11 @@ client.on('ready', function(){
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`**
+<<<<<<< HEAD
         ***__General orders__***
+=======
+        ***__اوامر العامه__***
+>>>>>>> parent of e57bc62... Delete bot.js
 **
 ${prefix}allbots/لعرض جميع البوتات الي بالسيرفر
 ${prefix}server/يعرض لك معلومات عن السيرفر
@@ -139,6 +151,7 @@ ${prefix}queue / لمعرفة قآئمة التشغيل
 **
         ***__Games orders__***
  **       
+<<<<<<< HEAD
 ${prefix}rps / حجر ورقة مقص
 ${prefix}speed / اسرع كتابة
 ${prefix}quas / اسئلة عامة
@@ -151,6 +164,11 @@ ${prefix}لو خيروك بطريقة حلوة / لو خيروك
 ${prefix}لعبة مريم / مريم
 ${prefix}فوائد ونصائح  / هل تعلم
 ${prefix}يعطيك عقابات قاسية / عقاب 
+=======
+
+${prefix}لعبة فكك / فكك
+${prefix}roll <number> / قرعة
+>>>>>>> parent of e57bc62... Delete bot.js
 =.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.
 welcome يتم الترحيب فى روم باسم
 G.setwelcomer <text channel name> لاختيار روم للترحيب
@@ -296,7 +314,11 @@ client.on('message', function(msg) {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
+<<<<<<< HEAD
             .setTitle('``INFO 3bker Community ©`` ')
+=======
+            .setTitle('``INFO Eltayeb Community ©`` ')
+>>>>>>> parent of e57bc62... Delete bot.js
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -304,9 +326,15 @@ client.on('message', function(msg) {
             .addField('``Users``' ,`[ ${client.users.size} ]` , true)
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+<<<<<<< HEAD
 			      .addField('``My Prefix``' , `[ ! ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
 			      .setFooter('By | 3bker')
+=======
+			      .addField('``My Prefix``' , `[ - ]` , true)
+			      .addField('``My Language``' , `[ Java Script ]` , true)
+			      .setFooter('By | Eltayeb')
+>>>>>>> parent of e57bc62... Delete bot.js
     })
 }
 });
@@ -393,7 +421,11 @@ client.on('message', message => {
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
+<<<<<<< HEAD
                   name: '3bker Community ©\'s translator',
+=======
+                  name: 'Eltayeb Community ©\'s translator',
+>>>>>>> parent of e57bc62... Delete bot.js
                   icon_url: client.user.avatarURL
                 },
                 fields: [{
@@ -404,7 +436,11 @@ client.on('message', message => {
                 timestamp: new Date(),
                 footer: {
                   icon_url: client.user.avatarURL,
+<<<<<<< HEAD
                   text: "3bker Community ©"
+=======
+                  text: "Eltayeb Community ©"
+>>>>>>> parent of e57bc62... Delete bot.js
                 }
             }}
             )
@@ -440,6 +476,7 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
 }
 });
 client.on('message', message => {
+<<<<<<< HEAD
  let args = message.content.split(' ').slice(1);
     if(message.content.startsWith(prefix + 'google')) {
     const input = args.join(' ');
@@ -452,6 +489,8 @@ google({ query: input, disableConsole: true }).then(results => {
 
 }});
 client.on('message', message => {
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
 if (message.content.startsWith(prefix + 'perms')) {
          if(!message.channel.guild) return;
          var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4);
@@ -731,7 +770,11 @@ if (!message.channel.guild) return;
 let args = message.content.split(" ").slice(1).join(" ");
 
 
+<<<<<<< HEAD
 client.users.get("516473846983950336").send(
+=======
+client.users.get("461728748207865867").send(
+>>>>>>> parent of e57bc62... Delete bot.js
     "\n" + "**" + "? السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ? المرسل : " + "**" +
@@ -743,7 +786,11 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
+<<<<<<< HEAD
      .setFooter("By : 3bker")
+=======
+     .setFooter("By : Eltayeb")
+>>>>>>> parent of e57bc62... Delete bot.js
                                                 
 
 message.channel.send(embed);
@@ -1539,7 +1586,10 @@ reaction3.on("collect", r => {
     })
 }
 });
+<<<<<<< HEAD
 const speed = [
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
     {
             "type": "https://cdn.discordapp.com/attachments/429298913980317696/429298994078810127/a90c6b270eb8bb2e.png",
         "answers": ["البرازيل"]
@@ -1838,11 +1888,16 @@ if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
+<<<<<<< HEAD
     let id = message.author.id,prefix="a";
+=======
+    let id = message.author.id,prefix="-";
+>>>>>>> parent of e57bc62... Delete bot.js
     if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
         let r = (new Date).getTime() - spee[id];
         r = 15*1000 - r;
     }
+<<<<<<< HEAD
     if ( message.content == prefix + 'speed'){
        
         try{
@@ -1890,6 +1945,8 @@ message.channel.sendEmbed(sh);
     spee[id] = (new Date).getTime()
 }
 });
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
 client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
@@ -1899,7 +1956,11 @@ client.on('guildCreate', guild => {
   New Server Add 3bker Community © ?
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
+<<<<<<< HEAD
 client.channels.get("474127377245667328").sendEmbed(embed)
+=======
+client.channels.get("461728748207865867").sendEmbed(embed)
+>>>>>>> parent of e57bc62... Delete bot.js
 });
 client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
@@ -1910,6 +1971,7 @@ client.on('guildDelete', guild => {
   Server Kicked 3bker Community © :cry:
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
+<<<<<<< HEAD
 client.channels.get("474127377245667328").sendEmbed(embed)
 });
 var type = [
@@ -2044,6 +2106,10 @@ var type = [
           }
     
 ];
+=======
+client.channels.get("461728748207865867").sendEmbed(embed)
+});
+>>>>>>> parent of e57bc62... Delete bot.js
  
 client.on('message', message => {
 if (!points[message.author.id]) points[message.author.id] = {
@@ -2126,7 +2192,10 @@ var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83
 message.channel.sendEmbed(cat);
     }
 });
+<<<<<<< HEAD
 var type = [
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
     {
             "type": "ما هي عاصمة المملكة العربية السعودية؟",
         "answers": ["الرياض"]
@@ -2227,12 +2296,17 @@ if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
+<<<<<<< HEAD
     let id = message.author.id,prefix="a";
+=======
+    let id = message.author.id,prefix="-";
+>>>>>>> parent of e57bc62... Delete bot.js
     if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
         let r = (new Date).getTime() - spee[id];
         r = 15*1000 - r;
     return;
     }
+<<<<<<< HEAD
     if ( message.content == prefix+'عواصم'){
        
         try{
@@ -2305,6 +2379,8 @@ client.on('message', function(message) {
         }
     }
 });
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
  client.on('message', async message => {
   if(message.content.startsWith(prefix + "temp")) {
     await message.channel.send("ارسل اسم الروم").then(e => {
@@ -2362,6 +2438,7 @@ coll.first().delete()
 
   }
 })
+<<<<<<< HEAD
 var al7arthyCodes = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
 var al7arthyCodes2 = ["??__60%__  **|**  ??__40%__","??__63%__  **|**  ??__37%__","??__89%__  **|**  ??__11%__","??__97%__  **|**  ??__3%__"]
 client.on('message', message => {
@@ -2533,6 +2610,8 @@ var Za7f = [
     "** تروح عند شخص تقول له احبك**.",
 
 ];
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
 
 client.on('message', message => {
  if (message.content.startsWith("G.عقاب")) {
@@ -2540,7 +2619,10 @@ client.on('message', message => {
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
  .setThumbnail(message.author.avatarURL) 
+<<<<<<< HEAD
 .addField('3bker Community ©' ,
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
 `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
@@ -2669,6 +2751,7 @@ member.guild.fetchInvites().then(guildInvites => {
       
       }
       });
+<<<<<<< HEAD
 	  client.on('guildMemberAdd', member => {
   member.guild.fetchInvites().then(guildInvites => {
     const ei = invites[member.guild.id];
@@ -2678,6 +2761,9 @@ member.guild.fetchInvites().then(guildInvites => {
      xkiller.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
   });
 });
+=======
+	   
+>>>>>>> parent of e57bc62... Delete bot.js
    client.on('message',async message => {
   if(message.content.startsWith(prefix + "voiceonline")) {
   if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply(':x: **ليس لديك الصلاحيات الكافية**');
@@ -2739,13 +2825,21 @@ client.on('message', async msg => { // eslint-disable-line
 				var video = await youtube.getVideo(url);
 			} catch (error) {
 				try {//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+<<<<<<< HEAD
 					var videos = await youtube.searchVideos(searchString, 5);
+=======
+					var videos = await youtube.searchVideos(searchString, 0);
+>>>>>>> parent of e57bc62... Delete bot.js
 					let index = 0;
 					const embed1 = new Discord.RichEmbed()
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+<<<<<<< HEAD
 					.setFooter("3bker Community ©")
+=======
+					.setFooter("eltayeb Community ©")
+>>>>>>> parent of e57bc62... Delete bot.js
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -2785,7 +2879,11 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء شغآل.');
 		if (!args[1]) return msg.channel.send(`:loud_sound: مستوى الصوت **${serverQueue.volume}**`);
 		serverQueue.volume = args[1];//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+<<<<<<< HEAD
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
+=======
+		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 100);
+>>>>>>> parent of e57bc62... Delete bot.js
 		return msg.channel.send(`:speaker: تم تغير الصوت الي **${args[1]}**`);
 	} else if (command === `np`) {
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء حالي ف العمل.');
@@ -2805,7 +2903,11 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 		return msg.channel.sendEmbed(embedqu);
 	} else if (command === `pause`) {
 		if (serverQueue && serverQueue.playing) {
+<<<<<<< HEAD
 			serverQueue.playing = false;
+=======
+			serverQueue.playing = true;
+>>>>>>> parent of e57bc62... Delete bot.js
 			serverQueue.connection.dispatcher.pause();
 			return msg.channel.send('تم إيقاف الموسيقى مؤقتا!');
 		}//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
@@ -2822,7 +2924,11 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 	return undefined;
 });
 //by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+<<<<<<< HEAD
 async function handleVideo(video, msg, voiceChannel, playlist = false) {
+=======
+async function handleVideo(video, msg, voiceChannel, playlist = true) {
+>>>>>>> parent of e57bc62... Delete bot.js
 	const serverQueue = queue.get(msg.guild.id);
 	console.log(video);
 	//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
@@ -2933,7 +3039,11 @@ ${prefix}queue ? لمعرفة قآئمة التشغيل
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('G.users')){
+<<<<<<< HEAD
  if(!message.author.id === '434263373077544961') return;
+=======
+ if(!message.author.id === '461728748207865867') return;
+>>>>>>> parent of e57bc62... Delete bot.js
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -2944,37 +3054,61 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
+<<<<<<< HEAD
   if (message.author.id == 410835593451405312) return;
 
 
 if (message.content.startsWith(prefix + 'playing')) {
 if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+=======
+  if (message.author.id == 461728748207865867) return;
+
+
+if (message.content.startsWith(prefix + 'playing')) {
+if (message.author.id !== '461728748207865867') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+>>>>>>> parent of e57bc62... Delete bot.js
 client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
 } else
 
 if (message.content.startsWith(prefix + 'streem')) {
+<<<<<<< HEAD
 if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+=======
+if (message.author.id !== '461728748207865867') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+>>>>>>> parent of e57bc62... Delete bot.js
 client.user.setGame(argresult, "http://twitch.tv/y04zgamer");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
 
 if (message.content.startsWith(prefix + 'setname')) {
+<<<<<<< HEAD
 if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+=======
+if (message.author.id !== '461728748207865867') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+>>>>>>> parent of e57bc62... Delete bot.js
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
 
 if (message.content.startsWith(prefix + 'setavatar')) {
+<<<<<<< HEAD
 if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+=======
+if (message.author.id !== '537576917642117121') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+>>>>>>> parent of e57bc62... Delete bot.js
 client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 } else
 
 
 if (message.content.startsWith(prefix + 'watching')) {
+<<<<<<< HEAD
 if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+=======
+if (message.author.id !== '537576917642117121') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+>>>>>>> parent of e57bc62... Delete bot.js
     client.user.setActivity(argresult, {type : 'watching'});
  message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
 }
@@ -3021,6 +3155,7 @@ client.on('guildMemberAdd', member => {
 return channel.send(embed)
     }
     )});
+<<<<<<< HEAD
 client.on('message',   eyad =>{
     
     var  args = eyad.content.split(" ").slice(2).join(" ")
@@ -3069,6 +3204,8 @@ eyad.delete();
 })
 }}
 });
+=======
+>>>>>>> parent of e57bc62... Delete bot.js
 var EpicEdiTeD = {};
 client.on("message", function(message){
 if (message.content.startsWith(prefix + "rank")) {
